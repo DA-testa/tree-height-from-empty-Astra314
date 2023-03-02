@@ -1,5 +1,5 @@
 # python3
-
+import os
 #import sys
 #import threading
 #import numpy
@@ -48,9 +48,11 @@ if "I" in inp:
     parents = input()
 if "F" in inp:
     file_name = input()
+    file="\\test\\"+file_name
+    path=os.getcwd()+file
     
     if "a" not in file_name:
-        f = open(file_name, "r")
+        f = open(path, "r")
         parents= f.read()
     else:
         exit()
