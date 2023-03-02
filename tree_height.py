@@ -66,12 +66,10 @@ def main():
                         return print(height(lst))
                     else:
                         pass
-                 else:
+                else:
                     pass
-          else:
-            pass
-     else:
-        pass
+         
+   
 
     
 main()
