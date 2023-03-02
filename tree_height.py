@@ -38,7 +38,7 @@ def height(tree):
     return max(depth_list)
 
 def main():
-    inp=input()
+    inp=str(input())
 
     if "I" in inp:
         nodes=int(input())
