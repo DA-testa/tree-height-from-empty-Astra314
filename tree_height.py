@@ -45,7 +45,7 @@ def height(tree):
 inp=input()
 
 if "I" in inp:
-    parents = inp.strip()
+    parents = input.strip()
 if "F" in inp:
     file_name = input()
     
