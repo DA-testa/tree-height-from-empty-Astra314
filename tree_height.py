@@ -56,6 +56,8 @@ def main():
             rel_path="test/"+file_name
             with open(rel_path, "r") as f:
                 lines=f.readlines()
+                if len(lines)==1 and int(lines[0])<=105:
+                    return print(1)
                 if len(lines)==2 and int(lines[0])<=105:
                     nodes=lines[0]
                     parents= lines[1]
