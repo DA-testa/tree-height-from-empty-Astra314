@@ -1,9 +1,3 @@
-# python3
-import os
-import sys
-import threading
-#import numpy
-
 
 #def compute_height(n, parents):
     # Write this function
@@ -30,42 +24,53 @@ import threading
 #main()
 # print(numpy.array([1,2,3]))
 
+import os
+import sys
+import threading
+
 def height(tree):
     depth_list = [1]*len(tree)
     for i, n in enumerate(tree):
         while n != -1:
             depth_list[i] += 1
             n = tree[n]
-    #print(depth_list)
-             
-    return depth_list
+               
+    return max(depth_list)
 
-inp=input()
+def main():
+    inp=input()
 
-if "I" in inp:
-    nodes=input()
-    parents = input()
-if "F" in inp:
-    file_name = input()
+    if "I" in inp:
+        nodes=input()
+        parents = input()
         
-    if "a" not in file_name:
-        script_dir=os.path.dirname(__file__)
-        rel_path="test/"+file_name
-        with open(rel_path, "r") as f:
-            lines=f.readlines()
-        nodes=lines[0]
-        parents= lines[1]
-    else:
-        exit()
+        if int(nodes)<=105:
+            lst=[int(x) for x in parents.strip().split(" ")]
+            return print(height(lst))
+    
+    if "F" in inp:
+        file_name = input()
         
+        if "a" not in file_name:
+            script_dir=os.path.dirname(os.path.abspath("__file__"))
+            rel_path="test/"+file_name
+            with open(rel_path, "r") as f:
+                lines=f.readlines()
+                if len(lines)==2 and int(lines[0])<=105:
+                    nodes=lines[0]
+                    parents= lines[1]
+                    lst=[int(x) for x in parents.strip().split(" ")]
+                    return print(height(lst))
+
+    
+main()
+         
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
-threading.Thread(target=height).start()
-        
-#print(parents)
-lst=[int(x) for x in parents.strip().split(" ")]
-#print(lst)
-del lst[0]
+threading.Thread(target=main).start()
 
-print(max(height(lst)))
+
+
+
+
 
