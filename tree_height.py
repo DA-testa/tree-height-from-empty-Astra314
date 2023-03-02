@@ -48,6 +48,7 @@ if "I" in inp:
     parents = inp.strip()
 if "F" in inp:
     file_name = input()
+    
     if "a" not in file_name:
         f = open(file_name, "r")
         parents= f.read()
