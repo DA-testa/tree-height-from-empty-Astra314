@@ -45,13 +45,15 @@ def height(tree):
 inp=input()
 
 if "I" in inp:
-    parents = input.strip()
+    parents = input().strip()
 if "F" in inp:
     file_name = input()
     
     if "a" not in file_name:
         f = open(file_name, "r")
         parents= f.read()
+    else:
+        exit()
 
 lst=[int(x) for x in parents.split(" ")]
 del lst[0]
