@@ -57,14 +57,12 @@ def main():
             with open(rel_path, "r") as f:
                 lines=f.readlines()
                 
-                if 1<=int(lines[0])<=105:
-                    nodes=lines[0]
-                    parents= lines[1]
-                    lst=[int(x) for x in parents.strip().split(" ")]
-                    return print(height(lst))
-                
-                else:
-                    return print(int(lines[0]))
+               # if 1<=int(lines[0])<=105:
+                nodes=lines[0]
+                parents= lines[1]
+                lst=[int(x) for x in parents.strip().split(" ")]
+                return print(height(lst))
+                                
         else:
             pass
          
