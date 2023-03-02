@@ -56,16 +56,13 @@ def main():
             rel_path="test/"+file_name
             with open(rel_path, "r") as f:
                 lines=f.readlines()
+                
                 if 1<=int(lines[0])<=105:
-                    if len(lines)==1:
-                        return print(int(lines[0]))
-                    elif len(lines)==2:
-                        nodes=lines[0]
-                        parents= lines[1]
-                        lst=[int(x) for x in parents.strip().split(" ")]
-                        return print(height(lst))
-                    else:
-                        return print(" ")
+                    nodes=lines[0]
+                    parents= lines[1]
+                    lst=[int(x) for x in parents.strip().split(" ")]
+                    return print(height(lst))
+                
                 else:
                     return print(int(lines[0]))
         else:
