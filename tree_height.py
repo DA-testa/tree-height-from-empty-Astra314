@@ -41,12 +41,12 @@ def main():
     inp=input()
 
     if "I" in inp:
-        nodes=input()
-        parents = input()
+        nodes=int(input())
+        parents = list(map(int, input().split(" ")))
         
-        if int(nodes)<=105:
-            lst=[int(x) for x in parents.strip().split(" ")]
-            return print(height(lst))
+        if nodes<=105:
+            
+            return print(height(parents))
     
     if "F" in inp:
         file_name = input()
