@@ -66,8 +66,8 @@ def main():
                         return print(height(lst))
                     else:
                         return print(" ")
-                else:
-                    return print(int(lines[0]))
+                #else:
+                #    return print(int(lines[0]))
          
    
 
