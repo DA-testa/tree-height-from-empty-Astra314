@@ -49,7 +49,7 @@ if "I" in inp:
 if "F" in inp:
     file_name = input()
     if "a" not in file_name:
-        f = open(filename, "r")
+        f = open(file_name, "r")
         parents= f.read()
 
 lst=[int(x) for x in parents.split(" ")]
