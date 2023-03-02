@@ -57,7 +57,7 @@ def main():
             with open(rel_path, "r") as f:
                 lines=f.readlines()
                 if len(lines)==1 and lines[0].isdigit():
-                    return print(1)
+                    return print(0)
                 if len(lines)==2 and int(lines[0])<=105:
                     nodes=lines[0]
                     parents= lines[1]
