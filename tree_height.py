@@ -42,12 +42,11 @@ def height(tree):
              
     return depth_list
 
-nodes=input()
-parents = input().strip()
+if "I" in input():
+    parents = input().strip()
 
 lst=[int(x) for x in parents.split(" ")]
-print(lst)
-#if nodes==len(lst) and max(lst)<=nodes-1:
+del lst[0]
+
 print(max(height(lst)))
-#else:
-#    print("input error")
+
