@@ -59,11 +59,19 @@ def main():
                 if 1<=int(lines[0])<=105:
                     if len(lines)==1:
                         return print(1)
-                    if len(lines)==2:
+                    elif len(lines)==2:
                         nodes=lines[0]
                         parents= lines[1]
                         lst=[int(x) for x in parents.strip().split(" ")]
                         return print(height(lst))
+                    else:
+                        pass
+                 else:
+                    pass
+          else:
+            pass
+     else:
+        pass
 
     
 main()
