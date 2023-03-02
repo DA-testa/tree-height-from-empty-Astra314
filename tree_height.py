@@ -67,7 +67,7 @@ def main():
                     else:
                         return print(" ")
                 else:
-                    return print(int(nodes))
+                    return print(int(lines[0]))
          
    
 
