@@ -65,9 +65,9 @@ def main():
                         lst=[int(x) for x in parents.strip().split(" ")]
                         return print(height(lst))
                     else:
-                        pass
+                        return print()
                 else:
-                    pass
+                    return print()
          
    
 
