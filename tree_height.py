@@ -45,7 +45,7 @@ def height(tree):
 inp=input()
 
 if "I" in inp:
-    parents = input().strip()
+    parents = input()
 if "F" in inp:
     file_name = input()
     
@@ -54,8 +54,10 @@ if "F" in inp:
         parents= f.read()
     else:
         exit()
-
-lst=[int(x) for x in parents.split(" ")]
+        
+print(parents)
+lst=[int(x) for x in parents.strip().split(" ")]
+print(lst)
 del lst[0]
 
 print(max(height(lst)))
