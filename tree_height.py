@@ -1,7 +1,7 @@
 # python3
 import os
-#import sys
-#import threading
+import sys
+import threading
 #import numpy
 
 
@@ -60,7 +60,7 @@ if "F" in inp:
         
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
-threading.Thread(target=main).start()
+threading.Thread(target=height).start()
         
 #print(parents)
 lst=[int(x) for x in parents.strip().split(" ")]
