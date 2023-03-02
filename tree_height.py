@@ -1,10 +1,8 @@
-
 #def compute_height(n, parents):
     # Write this function
 #    max_height = 0
     # Your code here
 #    return max_height
-
 
 #def main():
     # implement input form keyboard and from files
@@ -43,10 +41,8 @@ def main():
     if "I" in inp:
         nodes=int(input())
         parents = list(map(int, input().split(" ")))
-        
-        if nodes<=105:
-            
-            return print(height(parents))
+                        
+        return print(height(parents))
     
     if "F" in inp:
         file_name = input()
@@ -65,16 +61,10 @@ def main():
                                 
         else:
             pass
-         
+        
     
 main()
          
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
-
-
-
-
-
-
