@@ -49,18 +49,20 @@ if "I" in inp:
     parents = input()
 if "F" in inp:
     file_name = input()
-    file="\\test\\"+file_name
-    path=os.getcwd()+file
-    
+        
     if "a" not in file_name:
-        f = open(path, "r")
-        parents= f.read()
+        script_dir=os.path.dirname(__file__)
+        rel_path="test/"+file_name
+        with open(rel_path, "r") as f:
+            lines=f.readlines()
+        nodes=lines[0]
+        parents= lines[1]
     else:
         exit()
         
-print(parents)
+#print(parents)
 lst=[int(x) for x in parents.strip().split(" ")]
-print(lst)
+#print(lst)
 del lst[0]
 
 print(max(height(lst)))
