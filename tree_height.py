@@ -23,7 +23,8 @@
 # print(numpy.array([1,2,3]))
 
 jobs:
-    timeout-minutes: 15
+    configlet:
+        timeout-minutes: 15
 
 
 
