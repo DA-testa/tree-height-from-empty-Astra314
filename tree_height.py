@@ -63,10 +63,10 @@ def main():
             else:
                 pass
     except EOFError as e:
-        print(e)
+        pass
             
 main()
          
-#sys.setrecursionlimit(10**8)  # max depth of recursion
-#threading.stack_size(2**28)   # new thread will get stack of such size
-#threading.Thread(target=main).start()
+sys.setrecursionlimit(10**8)  # max depth of recursion
+threading.stack_size(2**28)   # new thread will get stack of such size
+threading.Thread(target=main).start()
