@@ -64,6 +64,6 @@ def main():
             
 main()
          
-sys.setrecursionlimit(10**7)  # max depth of recursion
-threading.stack_size(2**27)   # new thread will get stack of such size
+sys.setrecursionlimit(10**8)  # max depth of recursion
+threading.stack_size(2**30)   # new thread will get stack of such size
 threading.Thread(target=main).start()
