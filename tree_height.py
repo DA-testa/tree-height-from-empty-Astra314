@@ -37,31 +37,34 @@ def height(tree):
     return max(depth_list)
 
 def main():
-    inp=str(input())
+    try:
+        inp=str(input())
 
-    if "I" in inp:
-        nodes=int(input())
-        parents = list(map(int, input().split(" ")))
+        if "I" in inp:
+            nodes=int(input())
+            parents = list(map(int, input().split(" ")))
                         
-        return print(height(parents))
+            return print(height(parents))
     
-    if "F" in inp:
-        file_name = input()
+        if "F" in inp:
+            file_name = input()
         
-        if "a" not in file_name:
-            script_dir=os.path.dirname(os.path.abspath("__file__"))
-            rel_path="test/"+file_name
-            with open(rel_path, "r") as f:
-                lines=f.readlines()
+            if "a" not in file_name:
+                script_dir=os.path.dirname(os.path.abspath("__file__"))
+                rel_path="test/"+file_name
+                with open(rel_path, "r") as f:
+                    lines=f.readlines()
                 
-               # if 1<=int(lines[0])<=105:
-                nodes=lines[0]
-                parents= lines[1]
-                lst=[int(x) for x in parents.strip().split(" ")]
-                return print(height(lst))
+                    # if 1<=int(lines[0])<=105:
+                    nodes=lines[0]
+                    parents= lines[1]
+                    lst=[int(x) for x in parents.strip().split(" ")]
+                    return print(height(lst))
                                 
-        else:
-            pass
+            else:
+                pass
+    except EOFError as e:
+        print(e)
             
 main()
          
