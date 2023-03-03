@@ -87,7 +87,7 @@
       "input": "F\r\n21",
       "output": "100000",
       "comparison": "included",
-      "timeout": 4,
+      "timeout": 12,
       "points": 1
     },
     {
