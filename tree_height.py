@@ -22,11 +22,9 @@
 #main()
 # print(numpy.array([1,2,3]))
 
-jobs:
-  Test:
-    name: Run test
+defaults:
     timeout-minutes: 15
-    run: make unit-test
+
 
 
 import os
