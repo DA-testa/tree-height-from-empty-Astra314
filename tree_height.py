@@ -22,12 +22,6 @@
 #main()
 # print(numpy.array([1,2,3]))
 
-jobs:
-    configlet:
-        timeout-minutes: 15
-
-
-
 import os
 import sys
 import threading
