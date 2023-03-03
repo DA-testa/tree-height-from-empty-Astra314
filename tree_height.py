@@ -22,7 +22,7 @@
 #main()
 # print(numpy.array([1,2,3]))
 
-defaults:
+jobs:
     timeout-minutes: 15
 
 
